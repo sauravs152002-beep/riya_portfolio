@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { PhoneMockup } from './PhoneMockup';
 import { ArrowRight, MessageSquare, Calendar, Utensils, Bell, Users, Sparkles, CalendarCheck, Video, ClipboardList } from 'lucide-react';
 
+import imgSchola from "figma:asset/Gemini_Generated_Image_7qzwoj7qzwoj7qzw-2.png";
+
 const words = ['Seamlessly', 'Effortlessly', 'Beautifully'];
 
 export const Hero = () => {
@@ -18,6 +20,14 @@ export const Hero = () => {
 
   return (
     <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
+        <img 
+          src={imgSchola} 
+          alt="" 
+          className="w-full h-full object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+      </div>
       <motion.div style={{ y: bgY }} className="absolute top-[-200px] right-[-100px] w-[700px] h-[700px] bg-[#F4F0FF] rounded-full blur-[100px] -z-10 opacity-60" />
       <motion.div style={{ y: bgY }} className="absolute bottom-[-200px] left-[-200px] w-[500px] h-[500px] bg-[#F0F5FF] rounded-full blur-[100px] -z-10 opacity-40" />
 

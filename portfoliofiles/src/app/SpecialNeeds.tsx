@@ -31,6 +31,8 @@ import imgProductCaller from "../imports/P1120856_(2).PNG";
 import imgProductGame from "../imports/P1120828.PNG";
 import imgProductComm from "../imports/P1120830.PNG";
 
+import imgHero from "../imports/WhatsApp_Image_2026-05-03_at_9.53.37_PM_(1).jpeg";
+
 const ScrollContext = createContext<React.RefObject<HTMLDivElement | null> | null>(null);
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
@@ -111,16 +113,24 @@ export default function SpecialNeeds() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-40 pb-20 px-8 md:px-16">
+        <section className="pt-40 pb-20 px-8 md:px-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-full h-full -z-10 opacity-[0.05] pointer-events-none">
+            <img 
+              src={imgHero} 
+              alt="" 
+              className="w-full h-full object-cover grayscale"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#Fdfdfd] via-transparent to-[#Fdfdfd]" />
+          </div>
           <div className="max-w-[1200px] mx-auto w-full">
             <Reveal>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-[1px] bg-black/20" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">Inclusive Design • 2024</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-black/40">design for special needs . 2026</span>
               </div>
-              <h1 className="text-[clamp(48px,8vw,110px)] font-bold leading-[0.9] tracking-[-0.04em] text-[#1a1a1a] mb-12">
-                SUNO<br />
-                <span className="text-black/30 font-light italic font-serif">सुनो</span>
+              <h1 className="text-[clamp(48px,8vw,90px)] font-bold leading-[0.9] tracking-[-0.04em] text-[#1a1a1a] mb-12 uppercase">
+                सुनो<br />
+                <span className="text-black/30 font-light italic font-serif lowercase">suno</span>
               </h1>
               <p className="text-[18px] md:text-[22px] text-black/60 max-w-[700px] leading-[1.6] mb-16">
                 Listening Through Play — a personalised communication aid and play tool designed for a child with Down syndrome.

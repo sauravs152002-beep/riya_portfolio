@@ -53,7 +53,7 @@ export default function About() {
               className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[32px] bg-black/5"
             >
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1606162094541-2ea11d0dd56b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwcG9ydHJhaXQlMjB3b21hbiUyMGRlc2lnbmVyfGVufDF8fHx8MTc3NzM4MzI2MHww&ixlib=rb-4.1.0&q=80&w=1080" 
+                src="/src/imports/DSC04403.JPG" 
                 alt="Riya" 
                 className="w-full h-full object-cover grayscale-[30%]"
               />

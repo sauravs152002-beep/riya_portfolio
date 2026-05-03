@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from './components/LiquidGlassCursor';
 import { projects } from './data/projects';
-import riyaImage from './images/riya.jpeg';
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -234,10 +233,10 @@ export default function Home() {
                 className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[32px] bg-black/5"
               >
                 <ImageWithFallback 
-  src={riyaImage}
-  alt="Riya" 
-  className="w-full h-full object-cover grayscale-[30%]"
-/>
+                  src="/src/imports/DSC04403.JPG" 
+                  alt="Riya" 
+                  className="w-full h-full object-cover grayscale-[30%]"
+                />
               </motion.div>
             </div>
           </div>

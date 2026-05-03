@@ -15,6 +15,8 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from '../../app/components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from '../../app/components/LiquidGlassCursor';
 
+import imgFintech from "figma:asset/Gemini_Generated_Image_jclkdwjclkdwjclk-2.png";
+
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -51,8 +53,17 @@ export default function CaseStudy() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex flex-col justify-end px-12 pb-16">
+      <section id="hero" className="min-h-screen flex flex-col justify-end px-12 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-40">
+           <ImageWithFallback 
+             src={imgFintech} 
+             alt="Fintech EMI Journey" 
+             className="w-full h-full object-cover"
+           />
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        </div>
         <Reveal>
+          <div className="relative z-10">
           <div className="inline-flex items-center gap-2.5 mb-8 px-4 py-2 bg-[#0a0a0a] border border-[#222] rounded-full shadow-sm">
             <div className="w-1.5 h-1.5 rounded-full bg-white" />
             <span className="text-[10px] tracking-[0.2em] uppercase text-[#888] font-medium">ui/ux case study . 2026, fintech emi journey</span>
@@ -74,6 +85,7 @@ export default function CaseStudy() {
               </div>
             ))}
           </div>
+        </div>
         </Reveal>
       </section>
 
