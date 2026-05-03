@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from './components/LiquidGlassCursor';
 import { projects } from './data/projects';
+import profileImg from '../imports/DSC04403.JPG';
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -232,8 +233,8 @@ export default function Home() {
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[32px] bg-black/5"
               >
-                <ImageWithFallback 
-                  src="/src/imports/DSC04403.JPG" 
+                <img 
+                  src={profileImg} 
                   alt="Riya" 
                   className="w-full h-full object-cover grayscale-[30%]"
                 />
