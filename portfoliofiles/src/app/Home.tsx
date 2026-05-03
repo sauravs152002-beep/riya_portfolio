@@ -174,10 +174,10 @@ export default function Home() {
                   className="block w-full rounded-[40px] bg-[#f8f8f8] p-4 pb-12 transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
                   <div className="w-full overflow-hidden rounded-[32px] aspect-[4/3] lg:aspect-[16/11] relative mb-12">
-                    <ImageWithFallback 
+                    <img 
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain bg-white transition-transform duration-1000 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 flex items-center justify-center">
                       <motion.div 
