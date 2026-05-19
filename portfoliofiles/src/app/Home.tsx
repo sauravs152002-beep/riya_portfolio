@@ -339,7 +339,7 @@ export default function Home() {
         <div className="flex gap-12 text-[11px] uppercase tracking-widest font-semibold text-black/40 items-center">
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Riyatyagi0218@gmail.com" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors normal-case tracking-normal">Riyatyagi0218@gmail.com</a>
           <a href="tel:7303316671" data-interactive className="hover:text-black transition-colors">7303316671</a>
-          <a href="#" data-interactive className="hover:text-black transition-colors">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/riya-tyagi-81bbaa407/" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors">LinkedIn</a>
         </div>
         <div className="text-[11px] uppercase tracking-widest font-semibold text-black/40">DESIGNED WITH INTENT.</div>
       </footer>
