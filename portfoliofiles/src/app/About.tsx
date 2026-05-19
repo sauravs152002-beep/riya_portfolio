@@ -26,7 +26,7 @@ export default function About() {
         <div className="flex gap-8">
           <Link to="/" data-interactive className="text-[11px] uppercase tracking-[0.2em] font-semibold text-black/40 hover:text-black transition-colors">// WORK</Link>
           <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-black">// ABOUT</span>
-          <a href="mailto:hello@example.com" data-interactive className="text-[11px] uppercase tracking-[0.2em] font-semibold text-black/40 hover:text-black transition-colors">// CONTACT</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Riyatyagi0218@gmail.com" target="_blank" rel="noopener noreferrer" data-interactive className="text-[11px] uppercase tracking-[0.2em] font-semibold text-black/40 hover:text-black transition-colors">// CONTACT</a>
         </div>
       </motion.nav>
 

@@ -336,8 +336,9 @@ export default function Home() {
       {/* Footer */}
       <footer id="contact" className="py-16 px-8 md:px-16 border-t border-black/5 bg-[#Fdfdfd] text-black flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-[11px] uppercase tracking-widest font-semibold text-black/40">© 2026 RIYA TYAGI.</div>
-        <div className="flex gap-12 text-[11px] uppercase tracking-widest font-semibold text-black/40">
-          <a href="mailto:hello@example.com" data-interactive className="hover:text-black transition-colors">Email</a>
+        <div className="flex gap-12 text-[11px] uppercase tracking-widest font-semibold text-black/40 items-center">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Riyatyagi0218@gmail.com" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors normal-case tracking-normal">Riyatyagi0218@gmail.com</a>
+          <a href="tel:7303316671" data-interactive className="hover:text-black transition-colors">7303316671</a>
           <a href="#" data-interactive className="hover:text-black transition-colors">LinkedIn</a>
         </div>
         <div className="text-[11px] uppercase tracking-widest font-semibold text-black/40">DESIGNED WITH INTENT.</div>
