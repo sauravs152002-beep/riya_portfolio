@@ -49,7 +49,7 @@ export default function Website() {
               Interactive Prototypes
             </h2>
             <p className="text-[#8E8E93] text-[18px] max-w-2xl mx-auto leading-relaxed">
-              Experience the actual build of Schola Connect. These interactive prototypes run live code bridging the teacher and parent experience.
+              Experience the actual build of Eduo Connect. These interactive prototypes run live code bridging the teacher and parent experience.
             </p>
           </div>
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -60,14 +60,16 @@ export default function Website() {
                 <h3 className="text-[24px] font-bold tracking-tight mb-2 text-[#1C1C1E]">Parent Experience</h3>
                 <p className="text-[#8E8E93] text-[15px] max-w-sm mx-auto leading-relaxed">Stay updated with real-time notifications, track attendance, book PTM slots, and message teachers.</p>
               </div>
-              <div className="w-full max-w-[310px] h-[670px] rounded-[55px] border-[12px] border-[#1C1C1E] bg-[#1C1C1E] overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-transform duration-700 hover:scale-[1.02] ring-1 ring-white/10">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[110px] h-[30px] bg-[#1C1C1E] rounded-b-[18px] z-[999] flex justify-center items-center">
-                  <div className="w-10 h-1 bg-white/10 rounded-full"></div>
-                </div>
-                <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/10 rounded-full z-[999]"></div>
-                <div className="w-full h-full rounded-[43px] overflow-hidden bg-black relative" style={{ cursor: 'auto' }}>
-                  <div className="w-full h-full overflow-y-auto no-scrollbar">
-                    <ParentApp />
+              <div className="w-[331.5px] h-[717.4px] relative flex justify-center group">
+                <div className="w-[390px] h-[844px] rounded-[55px] border-[14px] border-[#1C1C1E] bg-[#1C1C1E] overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-transform duration-700 -translate-x-1/2 -translate-y-1/2 scale-[0.85] group-hover:scale-[0.87] ring-1 ring-white/10 shrink-0 absolute top-1/2 left-1/2">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[34px] bg-[#1C1C1E] rounded-b-[20px] z-[999] flex justify-center items-center">
+                    <div className="w-12 h-1 bg-white/10 rounded-full"></div>
+                  </div>
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[134px] h-[5px] bg-[#1C1C1E] rounded-full z-[999] overflow-hidden"><div className="w-full h-full bg-white/20"></div></div>
+                  <div className="w-full h-full rounded-[41px] overflow-hidden bg-black relative" style={{ cursor: 'auto' }}>
+                    <div className="w-full h-full">
+                      <ParentApp />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -79,14 +81,16 @@ export default function Website() {
                 <h3 className="text-[24px] font-bold tracking-tight mb-2 text-[#1C1C1E]">Teacher Dashboard</h3>
                 <p className="text-[#8E8E93] text-[15px] max-w-sm mx-auto leading-relaxed">Manage attendance quickly, approve leave requests, organize schedules, and monitor student performance.</p>
               </div>
-              <div className="w-full max-w-[310px] h-[670px] rounded-[55px] border-[12px] border-[#1C1C1E] bg-[#1C1C1E] overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-transform duration-700 hover:scale-[1.02] ring-1 ring-white/10">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[110px] h-[30px] bg-[#1C1C1E] rounded-b-[18px] z-[999] flex justify-center items-center">
-                  <div className="w-10 h-1 bg-white/10 rounded-full"></div>
-                </div>
-                <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/10 rounded-full z-[999]"></div>
-                <div className="w-full h-full rounded-[43px] overflow-hidden bg-black relative" style={{ cursor: 'auto' }}>
-                  <div className="w-full h-full overflow-y-auto no-scrollbar">
-                    <TeacherApp />
+              <div className="w-[331.5px] h-[717.4px] relative flex justify-center group">
+                <div className="w-[390px] h-[844px] rounded-[55px] border-[14px] border-[#1C1C1E] bg-[#1C1C1E] overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-transform duration-700 -translate-x-1/2 -translate-y-1/2 scale-[0.85] group-hover:scale-[0.87] ring-1 ring-white/10 shrink-0 absolute top-1/2 left-1/2">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[34px] bg-[#1C1C1E] rounded-b-[20px] z-[999] flex justify-center items-center">
+                    <div className="w-12 h-1 bg-white/10 rounded-full"></div>
+                  </div>
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[134px] h-[5px] bg-[#1C1C1E] rounded-full z-[999] overflow-hidden"><div className="w-full h-full bg-white/20"></div></div>
+                  <div className="w-full h-full rounded-[41px] overflow-hidden bg-black relative" style={{ cursor: 'auto' }}>
+                    <div className="w-full h-full">
+                      <TeacherApp />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -121,7 +125,7 @@ export default function Website() {
                   Designing better school experiences
                 </h2>
                 <p className="text-white/80 text-lg mb-10">
-                  Ready to see how Schola can transform your school's communication? Explore the full design case study or get in touch.
+                  Ready to see how Eduo can transform your school's communication? Explore the full design case study or get in touch.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/" data-interactive className="w-full sm:w-auto px-8 py-4 bg-white text-[#8A73FF] font-semibold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center justify-center gap-2 text-sm no-underline">

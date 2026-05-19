@@ -15,6 +15,13 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from '../../app/components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from '../../app/components/LiquidGlassCursor';
 
+import LockScreenUpcoming from "../LockScreenUpcoming/LockScreenUpcoming";
+import LockScreenUpcoming1 from "../LockScreenUpcoming-1/LockScreenUpcoming";
+import LsExpandedUpcoming from "../LsExpandedUpcoming/LsExpandedUpcoming";
+import LsExpandedUpcoming1 from "../LsExpandedUpcoming-1/LsExpandedUpcoming";
+import ExpandedUpcoming from "../ExpandedUpcoming/ExpandedUpcoming";
+import CompactUpcoming24HrsStay from "../CompactUpcoming24HrsStay/CompactUpcoming24HrsStay";
+
 import imgFintech from "figma:asset/Gemini_Generated_Image_jclkdwjclkdwjclk-2.png";
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
@@ -152,26 +159,17 @@ export default function CaseStudy() {
             <div className="text-[10px] tracking-[0.2em] uppercase text-[#888] font-bold mb-7">Early Wireframes — Exploring the OS Layer</div>
             <div className="flex gap-5 overflow-x-auto pb-8 no-scrollbar">
               {[
-                { t: 'v1 — Basic alert', active: false },
-                { t: 'v2 — Added CTA', active: false },
-                { t: 'v3 — App branding', active: false },
-                { t: 'v4 — Urgency colour', active: false },
-                { t: 'Final — Selected', active: true }
+                { t: 'v1 — Basic alert', active: false, Component: LockScreenUpcoming },
+                { t: 'v2 — Expanded', active: false, Component: LsExpandedUpcoming },
+                { t: 'v3 — Refined Base', active: false, Component: ExpandedUpcoming },
+                { t: 'v4 — Initial Content', active: false, Component: LockScreenUpcoming1 },
+                { t: 'v5 — Full Content', active: false, Component: LsExpandedUpcoming1 },
+                { t: 'Final — Selected', active: true, Component: CompactUpcoming24HrsStay }
               ].map((wf, i) => (
                 <div key={i} className="shrink-0 w-[148px]">
-                  <div className={`w-[148px] h-[260px] bg-[#0a0a0a] border rounded-[20px] p-4 flex flex-col gap-1.5 relative shadow-sm transition-all ${wf.active ? 'border-white ring-4 ring-white/10' : 'border-[#222]'}`}>
-                    <div className="absolute top-[7px] left-1/2 -translate-x-1/2 w-9 h-1 bg-[#333] rounded-full" />
-                    <div className="w-[44%] h-1.5 bg-[#333] rounded-full mb-1" />
-                    <div className="w-[54%] h-[22px] bg-[#111] rounded-md mb-1.5" />
-                    <div className="mt-auto bg-black border border-[#222] rounded-lg p-2 flex flex-col gap-1.5">
-                      <div className="w-1/2 h-1 bg-[#333] rounded-full" />
-                      <div className="w-[88%] h-1 bg-[#111] rounded-full" />
-                      {i > 0 && (
-                        <div className="flex gap-1.5 mt-1.5">
-                          <div className="flex-1 h-6 bg-[#111] rounded-md" />
-                          <div className={`flex-1 h-6 rounded-md ${i === 4 ? 'bg-white' : 'bg-[#333]'}`} />
-                        </div>
-                      )}
+                  <div className={`w-[148px] h-[321px] bg-[#0a0a0a] border rounded-[20px] overflow-hidden relative shadow-sm transition-all ${wf.active ? 'border-white ring-4 ring-white/10' : 'border-[#222]'}`}>
+                    <div className="absolute inset-0" style={{ width: 402, height: 874, transform: 'scale(0.36815)', transformOrigin: 'top left' }}>
+                      <wf.Component />
                     </div>
                   </div>
                   <div className={`text-[11px] font-medium text-center mt-4 ${wf.active ? 'text-white' : 'text-[#666]'}`}>{wf.t}</div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from './components/LiquidGlassCursor';
 import { projects } from './data/projects';
-import profileImg from '../imports/DSC04403.JPG';
+import portfolioImg from '../imports/portfolio.png';
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -172,9 +172,9 @@ export default function Home() {
                 <Link 
                   to={project.link} 
                   data-interactive 
-                  className="block w-full rounded-[40px] bg-[#f8f8f8] p-4 pb-12 transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2"
+                  className="block w-full rounded-[40px] bg-[#f8f8f8] overflow-hidden transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
-                  <div className="w-full overflow-hidden rounded-[32px] aspect-[4/3] lg:aspect-[16/11] relative mb-12">
+                  <div className="w-full overflow-hidden aspect-[4/3] lg:aspect-[16/11] relative mb-10">
                     <img 
                       src={project.image}
                       alt={project.title}
@@ -192,7 +192,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col items-start px-6">
+                  <div className="flex flex-col items-start px-8 pb-12">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-black/10" />
                       <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-black/30">{project.category}</span>
@@ -234,9 +234,9 @@ export default function Home() {
                 className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[32px] bg-black/5"
               >
                 <img 
-                  src={profileImg} 
+                  src={portfolioImg} 
                   alt="Riya" 
-                  className="w-full h-full object-cover grayscale-[30%]"
+                  className="w-full h-full object-cover transition-all duration-700 hover:scale-[1.03]"
                 />
               </motion.div>
             </div>

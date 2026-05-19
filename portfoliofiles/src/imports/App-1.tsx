@@ -43,12 +43,12 @@ function Layout() {
   const isDashboard = location.pathname === "/";
 
   return (
-    <div className="flex justify-center bg-[#f2f2f7] min-h-full">
-      <div className="w-full bg-[#f8f9fa] min-h-full relative shadow-2xl overflow-hidden flex flex-col">
+    <div className="flex justify-center bg-[#f2f2f7] h-full w-full">
+      <div className="w-full bg-[#f8f9fa] h-full relative shadow-2xl overflow-hidden flex flex-col">
         <Toaster position="top-center" />
         <main className={clsx(
           "flex-1 overflow-y-auto no-scrollbar",
-          !isDashboard && location.pathname !== "/login" && "pb-[110px]"
+          !isDashboard && location.pathname !== "/login" ? "pb-[110px]" : (isDashboard ? "pb-10" : "")
         )}>
           <Outlet />
         </main>
@@ -105,8 +105,8 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center bg-[#f2f2f7] min-h-full">
-      <div className="w-full bg-white min-h-full relative shadow-2xl flex flex-col px-[24px] justify-center items-center">
+    <div className="flex justify-center bg-[#f2f2f7] h-full w-full">
+      <div className="w-full bg-white h-full relative shadow-2xl flex flex-col px-[24px] justify-center items-center">
         <div className="w-[80px] h-[80px] bg-[#f4f0ff] rounded-[24px] flex items-center justify-center mb-[32px]">
           <User size={40} className="text-[#8a73ff]" strokeWidth={2} />
         </div>
@@ -156,7 +156,7 @@ function Dashboard() {
         <div className="fixed inset-0 z-[100] flex justify-center bg-transparent pointer-events-none">
           <div className="w-full max-w-[390px] relative pointer-events-auto h-full">
             <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] transition-opacity" onClick={() => setIsMenuOpen(false)} />
-            <div className="absolute top-0 left-0 w-[312px] h-full bg-white shadow-2xl flex flex-col z-10 animate-in slide-in-from-left duration-300 rounded-r-[32px] overflow-hidden">
+            <div className="absolute top-0 left-0 w-[280px] h-full bg-white shadow-2xl flex flex-col z-10 animate-in slide-in-from-left duration-300 rounded-r-[32px] overflow-hidden">
               {/* Menu Header */}
               <div className="p-[24px] pt-[68px] flex items-start justify-between border-b border-[#f3f4f6]">
                 <div className="flex items-center gap-[16px]">
@@ -555,7 +555,7 @@ function Messages() {
   ];
 
   return (
-    <div className="flex flex-col min-h-full bg-[#f8f9fa] overflow-x-hidden pb-[100px] no-scrollbar">
+    <div className="flex flex-col h-full bg-[#f8f9fa] overflow-x-hidden pb-[100px] no-scrollbar">
       {/* Chat Box Overlay */}
       {selectedChat && (
         <div className="fixed inset-0 z-[100] flex justify-center bg-transparent pointer-events-none">
@@ -733,7 +733,7 @@ function Meals() {
   }
 
   return (
-    <div className="flex flex-col min-h-full bg-[#f8f9fa] pb-[100px] no-scrollbar">
+    <div className="flex flex-col h-full bg-[#f8f9fa] pb-[100px] no-scrollbar">
       <div className="flex items-center justify-between px-[24px] pt-[68px] pb-[20px]">
         <h1 className="text-[20px] font-bold text-[#1c1c1e] tracking-[-0.5px]">Lunch Booking</h1>
         <Link to="/" className="px-[21px] py-[8px] bg-white rounded-[42px] text-[14px] font-semibold text-[#1c1c1e] shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#e5e5ea] active:scale-95 transition-transform no-underline">Home</Link>
@@ -868,7 +868,7 @@ function Leaves() {
   };
 
   return (
-    <div className="flex flex-col min-h-full bg-[#f8f9fa] overflow-x-hidden pb-[100px] no-scrollbar">
+    <div className="flex flex-col h-full bg-[#f8f9fa] overflow-x-hidden pb-[100px] no-scrollbar">
       {/* Leave Application Form Overlay */}
       {isAddingLeave && (
         <div className="fixed inset-0 z-[100] flex justify-center bg-transparent pointer-events-none">

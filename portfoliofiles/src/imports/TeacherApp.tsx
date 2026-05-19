@@ -44,9 +44,9 @@ function LoginScreen({ navigate }: { navigate: (s: Screen) => void }) {
   };
   return (
     <div className="flex flex-col h-full bg-[#F8F9FA] px-8 py-12 relative overflow-hidden">
-      <div className="absolute top-[-30px] right-[-30px] w-48 h-48 bg-[#FFB067] rounded-full opacity-10 blur-3xl" />
-      <div className="absolute bottom-20 left-[-40px] w-64 h-64 bg-[#8A73FF] rounded-full opacity-10 blur-3xl" />
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="absolute top-[-30px] right-[-30px] w-48 h-48 bg-[#FFB067] rounded-full opacity-10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 left-[-40px] w-64 h-64 bg-[#8A73FF] rounded-full opacity-10 blur-3xl pointer-events-none" />
+      <div className="flex-1 flex flex-col justify-center relative z-10">
         <div className="w-16 h-16 bg-white rounded-[20px] flex items-center justify-center mb-8 shadow-[0_8px_24px_rgba(138,115,255,0.12)]">
           <BookOpen size={28} className="text-[#8A73FF]" />
         </div>
@@ -55,18 +55,19 @@ function LoginScreen({ navigate }: { navigate: (s: Screen) => void }) {
           Enter your school code to access your classroom dashboard and updates.
         </p>
       </div>
-      <div className="flex-1 flex flex-col justify-end pb-12">
+      <div className="flex-1 flex flex-col justify-end pb-12 relative z-10">
         <form onSubmit={handleLogin} className="flex flex-col bg-white p-6 rounded-[28px] shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-50">
-          <div className="mb-8">
-            <label className="text-xs font-semibold text-[#8E8E93] mb-2 block tracking-wide uppercase">School Code</label>
+          <div className="mb-8 cursor-pointer" onClick={() => setCode('84920')}>
+            <label className="text-xs font-semibold text-[#8E8E93] mb-2 block tracking-wide uppercase cursor-pointer">School Code</label>
             <input type="text" placeholder="e.g. 84920" value={code} onChange={(e) => setCode(e.target.value)}
-              className="w-full bg-[#F8F9FA] border border-gray-100 text-[#1C1C1E] rounded-[16px] py-4 px-4 font-semibold text-lg outline-none focus:border-[#8A73FF] focus:ring-1 focus:ring-[#8A73FF] transition-all placeholder:font-medium placeholder:text-[#C7C7CC]"
+              className="w-full bg-[#F8F9FA] border border-gray-100 text-[#1C1C1E] rounded-[16px] py-4 px-4 font-semibold text-lg outline-none focus:border-[#8A73FF] focus:ring-1 focus:ring-[#8A73FF] transition-all placeholder:font-medium placeholder:text-[#C7C7CC] cursor-pointer"
               maxLength={8}
+              readOnly
             />
           </div>
           <button type="submit" disabled={code.length < 4}
             className={`w-full py-4 rounded-[16px] font-semibold text-sm flex justify-center items-center transition-all duration-300 ${
-              code.length >= 4 ? 'bg-[#8A73FF] text-white shadow-lg shadow-[#8A73FF]/30' : 'bg-gray-100 text-[#C7C7CC] cursor-not-allowed'
+              code.length >= 4 ? 'bg-[#8A73FF] text-white shadow-lg shadow-[#8A73FF]/30 active:scale-95' : 'bg-gray-100 text-[#C7C7CC] cursor-not-allowed'
             }`}
           >
             Continue <ArrowRight size={18} className="ml-2" />
@@ -227,7 +228,7 @@ function AttendanceScreen({ navigate }: { navigate: (s: Screen) => void }) {
         }
       </div>
 
-      <div className="sticky bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA] to-[#F8F9FA]/0 z-30 space-y-3 shrink-0">
+      <div className="sticky bottom-0 left-0 right-0 p-5 pb-10 bg-gradient-to-t from-[#F8F9FA] via-[#F8F9FA] to-[#F8F9FA]/0 z-30 space-y-3 shrink-0">
         {absentCount > 0 && (
           <button onClick={handleNotify} disabled={notifying} className="w-full py-[12px] bg-white text-[#FF7A7A] border border-[#FF7A7A]/20 rounded-[16px] font-bold shadow-[0_4px_12px_rgba(255,122,122,0.1)] active:scale-[0.98] transition-all text-[14px] flex items-center justify-center space-x-2 disabled:opacity-50">
             <BellRing size={18} /><span>Notify Parents of {absentCount} Kids</span>
@@ -426,7 +427,7 @@ function ChatScreen({ navigate, chatId }: { navigate: (s: Screen) => void; chatI
         ))}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-[20px] bg-white border-t border-gray-100 z-30">
+      <div className="absolute bottom-0 left-0 right-0 p-[20px] pb-10 bg-white border-t border-gray-100 z-30">
         <div className="flex items-center bg-[#F8F9FA] border border-gray-100 rounded-[18px] p-1.5 pr-2 shadow-inner">
           <input type="text" placeholder="Type message..." className="flex-1 bg-transparent text-[#1C1C1E] text-[15px] font-medium py-[14px] pl-[16px] outline-none placeholder:text-[#C7C7CC]" value={message} onChange={(e) => setMessage(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()} />
           <button onClick={handleSend} disabled={!message.trim()} className={`w-[44px] h-[44px] rounded-[14px] flex items-center justify-center transition-all ${message.trim() ? 'bg-[#FA9A50] text-white shadow-[0_4px_16px_rgba(250,154,80,0.3)]' : 'bg-white border border-gray-200 text-[#C7C7CC] cursor-not-allowed'}`}><Send size={18} className="ml-0.5" /></button>

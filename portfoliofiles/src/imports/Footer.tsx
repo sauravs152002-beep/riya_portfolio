@@ -9,7 +9,7 @@ export function Footer() {
         <Heart className="w-4 h-4 text-[#8A73FF] fill-[#8A73FF]" />
         <span className="text-sm font-medium">for better education</span>
       </div>
-      <p className="text-xs tracking-wide uppercase opacity-60">© {new Date().getFullYear()} Schola Case Study. All rights reserved.</p>
+      <p className="text-xs tracking-wide uppercase opacity-60">© {new Date().getFullYear()} Eduo Case Study. All rights reserved.</p>
     </footer>
   );
 }
