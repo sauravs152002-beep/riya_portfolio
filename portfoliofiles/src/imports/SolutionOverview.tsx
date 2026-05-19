@@ -53,7 +53,7 @@ export const SolutionOverview = () => {
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#8A73FF] mb-6 group-hover:bg-[#8A73FF] group-hover:text-white transition-all duration-500">
                 <User size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-[#1C1C1E] mb-3">Eduo Parent</h3>
+              <h3 className="text-2xl font-bold text-[#1C1C1E] mb-3">Schola Parent</h3>
               <p className="text-[#8E8E93] mb-6 leading-relaxed text-sm">
                 Designed for busy parents like Rohan who need quick access to school schedules, meal booking, and Aarav's progress updates.
               </p>
@@ -87,7 +87,7 @@ export const SolutionOverview = () => {
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-[#8A73FF] mb-6 group-hover:bg-[#8A73FF] group-hover:text-white transition-all duration-500">
                 <GraduationCap size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">Eduo Teacher</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Schola Teacher</h3>
               <p className="text-[#8E8E93] mb-6 leading-relaxed text-sm">
                 Empowering teachers like Anjali Sharma with administrative tools that reduce workload and improve parent engagement.
               </p>

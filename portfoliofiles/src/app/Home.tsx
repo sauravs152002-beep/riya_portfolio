@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, ArrowDown, MoveRight, ArrowLeft } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, MoveRight, ArrowLeft, Linkedin } from 'lucide-react';
 import { Link } from 'react-router';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from './components/LiquidGlassCursor';
@@ -236,7 +236,7 @@ export default function Home() {
                 <img 
                   src={portfolioImg} 
                   alt="Riya" 
-                  className="w-full h-full object-cover transition-all duration-700 hover:scale-[1.03]"
+                  className="w-full h-full object-cover grayscale-0 transition-transform duration-700 hover:scale-105"
                 />
               </motion.div>
             </div>
@@ -336,10 +336,13 @@ export default function Home() {
       {/* Footer */}
       <footer id="contact" className="py-16 px-8 md:px-16 border-t border-black/5 bg-[#Fdfdfd] text-black flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-[11px] uppercase tracking-widest font-semibold text-black/40">© 2026 RIYA TYAGI.</div>
-        <div className="flex gap-12 text-[11px] uppercase tracking-widest font-semibold text-black/40 items-center">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Riyatyagi0218@gmail.com" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors normal-case tracking-normal">Riyatyagi0218@gmail.com</a>
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-[11px] uppercase tracking-widest font-semibold text-black/40 items-center">
           <a href="tel:7303316671" data-interactive className="hover:text-black transition-colors">7303316671</a>
-          <a href="https://www.linkedin.com/in/riya-tyagi-81bbaa407/" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors">LinkedIn</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Riyatyagi0218@gmail.com" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-black transition-colors">Email</a>
+          <a href="https://www.linkedin.com/in/riya-tyagi-81bbaa407/" target="_blank" rel="noopener noreferrer" data-interactive className="hover:text-[#8A73FF] transition-colors flex items-center gap-2">
+            <Linkedin size={14} />
+            LinkedIn
+          </a>
         </div>
         <div className="text-[11px] uppercase tracking-widest font-semibold text-black/40">DESIGNED WITH INTENT.</div>
       </footer>

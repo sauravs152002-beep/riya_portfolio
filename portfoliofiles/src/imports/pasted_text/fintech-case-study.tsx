@@ -15,12 +15,11 @@ import { Link } from 'react-router';
 import { ImageWithFallback } from '../../app/components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from '../../app/components/LiquidGlassCursor';
 
-import LockScreenUpcoming from "../LockScreenUpcoming/LockScreenUpcoming";
-import LockScreenUpcoming1 from "../LockScreenUpcoming-1/LockScreenUpcoming";
-import LsExpandedUpcoming from "../LsExpandedUpcoming/LsExpandedUpcoming";
-import LsExpandedUpcoming1 from "../LsExpandedUpcoming-1/LsExpandedUpcoming";
-import ExpandedUpcoming from "../ExpandedUpcoming/ExpandedUpcoming";
-import CompactUpcoming24HrsStay from "../CompactUpcoming24HrsStay/CompactUpcoming24HrsStay";
+import LockScreenUpcoming from "../LockScreenUpcoming-2/LockScreenUpcoming";
+import LsExpandedUpcoming2 from "../LsExpandedUpcoming-2/LsExpandedUpcoming";
+import LsExpandedUpcoming3 from "../LsExpandedUpcoming-3/LsExpandedUpcoming";
+import ExpandedUpcoming from "../ExpandedUpcoming-1/ExpandedUpcoming";
+import CompactUpcoming24HrsStay from "../CompactUpcoming24HrsStay-1/CompactUpcoming24HrsStay";
 
 import imgFintech from "figma:asset/Gemini_Generated_Image_jclkdwjclkdwjclk-2.png";
 
@@ -159,17 +158,16 @@ export default function CaseStudy() {
             <div className="text-[10px] tracking-[0.2em] uppercase text-[#888] font-bold mb-7">Early Wireframes — Exploring the OS Layer</div>
             <div className="flex gap-5 overflow-x-auto pb-8 no-scrollbar">
               {[
-                { t: 'v1 — Basic alert', active: false, Component: LockScreenUpcoming },
-                { t: 'v2 — Expanded', active: false, Component: LsExpandedUpcoming },
-                { t: 'v3 — Refined Base', active: false, Component: ExpandedUpcoming },
-                { t: 'v4 — Initial Content', active: false, Component: LockScreenUpcoming1 },
-                { t: 'v5 — Full Content', active: false, Component: LsExpandedUpcoming1 },
-                { t: 'Final — Selected', active: true, Component: CompactUpcoming24HrsStay }
+                { t: 'v1 — Basic alert', active: false, Comp: LockScreenUpcoming },
+                { t: 'v2 — Added CTA', active: false, Comp: LsExpandedUpcoming2 },
+                { t: 'v3 — App branding', active: false, Comp: LsExpandedUpcoming3 },
+                { t: 'v4 — Urgency colour', active: false, Comp: ExpandedUpcoming },
+                { t: 'Final — Selected', active: true, Comp: CompactUpcoming24HrsStay }
               ].map((wf, i) => (
                 <div key={i} className="shrink-0 w-[148px]">
-                  <div className={`w-[148px] h-[321px] bg-[#0a0a0a] border rounded-[20px] overflow-hidden relative shadow-sm transition-all ${wf.active ? 'border-white ring-4 ring-white/10' : 'border-[#222]'}`}>
-                    <div className="absolute inset-0" style={{ width: 402, height: 874, transform: 'scale(0.36815)', transformOrigin: 'top left' }}>
-                      <wf.Component />
+                  <div className={`w-[148px] h-[322px] bg-[#0a0a0a] border rounded-[20px] overflow-hidden relative shadow-sm transition-all ${wf.active ? 'border-white ring-4 ring-white/10' : 'border-[#222]'}`}>
+                    <div className="w-[402px] h-[874px] origin-top-left scale-[0.368159]">
+                      <wf.Comp />
                     </div>
                   </div>
                   <div className={`text-[11px] font-medium text-center mt-4 ${wf.active ? 'text-white' : 'text-[#666]'}`}>{wf.t}</div>

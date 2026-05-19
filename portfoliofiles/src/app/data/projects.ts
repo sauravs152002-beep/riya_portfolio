@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Eduo",
+    title: "schola",
     category: "product design . 2025",
     image: imgSchola,
     link: "/project/ecommerce",

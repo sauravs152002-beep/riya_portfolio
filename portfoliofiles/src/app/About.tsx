@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { ArrowLeft } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { LiquidGlassCursor } from './components/LiquidGlassCursor';
-import profileImg from '../imports/DSC04403.JPG';
+import portfolioImg from '../imports/portfolio.png';
 
 export default function About() {
   useEffect(() => {
@@ -54,9 +54,9 @@ export default function About() {
               className="relative aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[32px] bg-black/5"
             >
               <img 
-                src={profileImg} 
+                src={portfolioImg} 
                 alt="Riya" 
-                className="w-full h-full object-cover grayscale-[30%]"
+                className="w-full h-full object-cover grayscale-0 transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
           </div>

@@ -41,9 +41,9 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2.5 no-underline">
             <div className="w-8 h-8 bg-[#8A73FF] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">E</span>
+              <span className="text-white font-bold text-sm">S</span>
             </div>
-            <span className="font-bold text-[#1C1C1E] tracking-tight text-lg">Eduo</span>
+            <span className="font-bold text-[#1C1C1E] tracking-tight text-lg">Schola</span>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

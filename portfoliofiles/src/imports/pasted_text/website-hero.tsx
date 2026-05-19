@@ -49,7 +49,7 @@ export default function Website() {
               Interactive Prototypes
             </h2>
             <p className="text-[#8E8E93] text-[18px] max-w-2xl mx-auto leading-relaxed">
-              Experience the actual build of Eduo Connect. These interactive prototypes run live code bridging the teacher and parent experience.
+              Experience the actual build of Schola Connect. These interactive prototypes run live code bridging the teacher and parent experience.
             </p>
           </div>
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -125,7 +125,7 @@ export default function Website() {
                   Designing better school experiences
                 </h2>
                 <p className="text-white/80 text-lg mb-10">
-                  Ready to see how Eduo can transform your school's communication? Explore the full design case study or get in touch.
+                  Ready to see how Schola can transform your school's communication? Explore the full design case study or get in touch.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/" data-interactive className="w-full sm:w-auto px-8 py-4 bg-white text-[#8A73FF] font-semibold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center justify-center gap-2 text-sm no-underline">

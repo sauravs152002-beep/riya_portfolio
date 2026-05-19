@@ -53,7 +53,7 @@ export default function Home() {
                   Designing better school experiences
                 </h2>
                 <p className="text-white/80 text-lg mb-10">
-                  Ready to see how Eduo can transform your school's communication? Explore the full design case study or get in touch.
+                  Ready to see how Schola can transform your school's communication? Explore the full design case study or get in touch.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button className="w-full sm:w-auto px-8 py-4 bg-white text-[#8A73FF] font-semibold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center justify-center gap-2 text-sm">
@@ -74,13 +74,13 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 bg-[#8A73FF] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xs">E</span>
+                <span className="text-white font-bold text-xs">S</span>
               </div>
-              <span className="font-semibold text-[#1C1C1E] tracking-tight">Eduo</span>
+              <span className="font-semibold text-[#1C1C1E] tracking-tight">Schola</span>
             </div>
 
             <p className="text-[#8E8E93] text-sm">
-              &copy; 2026 Eduo Case Study • Designed for Parents & Teachers
+              &copy; 2026 Schola Case Study • Designed for Parents & Teachers
             </p>
 
             <div className="flex gap-6">

@@ -110,7 +110,7 @@ export const Hero = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-[#8E8E93] max-w-lg leading-relaxed"
             >
-              Eduo is a unified school communication app that replaces fragmented systems, missed updates, and manual meal booking with one elegant experience.
+              Schola is a unified school communication app that replaces fragmented systems, missed updates, and manual meal booking with one elegant experience.
             </motion.p>
 
             <motion.div
